@@ -1,4 +1,4 @@
-<div class="container border rounded" style="width: 50%">
+<div class="container shadow-lg p-3 mb-5 bg-white rounded" style="width: 50%">
   <div>
     <div class="row mb-5 mt-2">
       <div class="col-6">Logo</div>
@@ -18,39 +18,39 @@
     method="post"
   >
     <!-- Email input -->
-    <div class="form-outline mb-4">
+    <div class="inputbox mt-3 mr-2">
       <input
         type="email"
-        id="form2Example1"
-        ngModel
         name="email"
+        ngmodel
         class="form-control"
-        placeholder="Email"
+        required="required"
       />
+      <i class="fa fa-credit-card"></i> <span>Email</span>
     </div>
 
     <!-- FullName input -->
-    <div class="form-outline mb-4">
+    <div class="inputbox mt-3 mr-2">
       <input
         type="text"
-        ngModel
         name="fullName"
-        id="form2Example1"
+        ngmodel
         class="form-control"
-        placeholder="Full Name"
+        required="required"
       />
+      <i class="fa fa-credit-card"></i> <span>Full Name</span>
     </div>
 
     <!-- Password input -->
-    <div class="form-outline mb-4">
+    <div class="inputbox mt-3 mr-2">
       <input
         type="password"
-        ngModel
         name="password"
-        id="form2Example2"
+        ngmodel
         class="form-control"
-        placeholder="Password"
+        required="required"
       />
+      <i class="fa fa-credit-card"></i> <span>Password</span>
     </div>
 
     <!-- Submit button -->
@@ -62,11 +62,7 @@
     <div class="text-left">
       <p class="m-0 p-0">By signing uo you are agreeing to our</p>
       <p>
-        <a
-          href="#!"
-          class="text-decoration-none text-dark font-weight-bold m-0 p-0"
-          >Terms And Conditions</a
-        >
+        <a href="#!" class="text-dark fs-5 text-decoration-none">Terms And Conditions</a>
       </p>
     </div>
   </form>

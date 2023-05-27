@@ -28,7 +28,6 @@ _.route("/create-account").post((req, res) => {
       }
     });
   } catch (error) {
-    console.log(error.message);
     return res.status(501).send({ status: "failed", message: error.message });
   }
 });
