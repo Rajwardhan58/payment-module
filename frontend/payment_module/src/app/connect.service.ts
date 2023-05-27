@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class ConnectService {
 
-  setUrl=""
+  setUrl="http://localhost:3000/create-account"
   constructor(private http : HttpClient) { }
 
   setDataLog(data:any):Observable<any[]>{

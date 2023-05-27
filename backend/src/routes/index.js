@@ -1,15 +1,15 @@
 "use strict";
 import express from "express";
 
-import userModel from "../models/user.model";
-import paymentModel from "../models/paymentdetails.model";
+import userModel from "../models/user.model.js";
+import paymentModel from "../models/paymentdetails.model.js";
 
 const _ = express.Router();
 
 _.route("/create-account").post((req, res) => {
   try {
     const body = req.body;
-
+    console.log(req.body);
     const result = userModel.findOne({
       where: { email: body.email, delete: false },
     });

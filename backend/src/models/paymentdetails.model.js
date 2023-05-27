@@ -22,7 +22,7 @@ export default (sequelize, DataTypes) => {
             }
         },
         card_expire: {
-            type: DataTypes.DATES,
+            type: DataTypes.STRING,
         },
         card_cvv:{
             type:DataTypes.INTEGER,
