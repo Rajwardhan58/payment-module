@@ -26,14 +26,6 @@ export default (sequelize, DataTypes) => {
         min: 8,
       }
     },
-    createdAt: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      defaultValue: DataTypes.NOW,
-    },
   });
   User.beforeCreate((user, _) => {
     return user.password = bcrypt.hashSync(user.password, genSaltSync(10));

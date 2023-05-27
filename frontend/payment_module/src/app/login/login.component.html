@@ -1,39 +1,73 @@
-<div class="container border" style="height: 30%;width: 30%;">
-    <div>
-        <div class="row mb-5 mt-2">
-            <div class="col-6">Logo</div>
-            <div class="col-6 text-right">Login Link</div>
-        </div>
-        <div>
-            <h2>
-                Manage your freelance business with us!
-            </h2>
-            <P>Takes less than 15 minutes to feel out all the informationexcited to ----- your business</P>
-        </div>
+<div class="container border rounded" style="height: 30%; width: 20%">
+  <div>
+    <div class="row mb-5 mt-2">
+      <div class="col-6">Logo</div>
+      <div class="col-6 text-end">Login Link</div>
     </div>
-    <form #loginForm="ngForm" (ngSubmit)="setLoginData(loginForm.value)" method="post">
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-            <input type="email" id="form2Example1" ngModel name="email" class="form-control" placeholder="Email"/>
-        </div>
+    <div>
+      <h2>Manage your freelance business with us!</h2>
+      <P
+        >Takes less than 15 minutes to feel out all the informationexcited to
+        ----- your business</P
+      >
+    </div>
+  </div>
+  <form
+    #loginForm="ngForm"
+    (ngSubmit)="setLoginData(loginForm.value)"
+    method="post"
+  >
+    <!-- Email input -->
+    <div class="form-outline mb-4">
+      <input
+        type="email"
+        id="form2Example1"
+        ngModel
+        name="email"
+        class="form-control"
+        placeholder="Email"
+      />
+    </div>
 
-        <!-- FullName input -->
-        <div class="form-outline mb-4">
-            <input type="text" ngModel name="fullName" id="form2Example1" class="form-control" placeholder="Full Name"/>
-        </div>
+    <!-- FullName input -->
+    <div class="form-outline mb-4">
+      <input
+        type="text"
+        ngModel
+        name="fullName"
+        id="form2Example1"
+        class="form-control"
+        placeholder="Full Name"
+      />
+    </div>
 
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-            <input type="password" ngModel name="password" id="form2Example2" class="form-control" placeholder="Password"/>
-        </div>
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input
+        type="password"
+        ngModel
+        name="password"
+        id="form2Example2"
+        class="form-control"
+        placeholder="Password"
+      />
+    </div>
 
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4 form-control">Get Started</button>
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary btn-block mb-4 form-control">
+      Get Started
+    </button>
 
-        <!-- Register buttons -->
-        <div class="text-left">
-            <p>By signing uo you are agreeing to our</p>
-            <p><a href="#!">Terms And Conditions</a></p>
-        </div>
-    </form>
+    <!-- Register buttons -->
+    <div class="text-left">
+      <p class="m-0 p-0">By signing uo you are agreeing to our</p>
+      <p>
+        <a
+          href="#!"
+          class="text-decoration-none text-dark font-weight-bold m-0 p-0"
+          >Terms And Conditions</a
+        >
+      </p>
+    </div>
+  </form>
 </div>

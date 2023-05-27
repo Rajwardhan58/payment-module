@@ -11,7 +11,6 @@ export class ConnectService {
   constructor(private http : HttpClient) { }
 
   setDataLog(data:any):Observable<any[]>{
-    console.warn(data)
     return this.http.post<any>(this.setUrl,data);
   }
 }

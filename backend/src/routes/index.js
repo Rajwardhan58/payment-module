@@ -1,32 +1,34 @@
 "use strict";
 import express from "express";
+import db from "../models/index.js";
 
-import userModel from "../models/user.model.js";
-import paymentModel from "../models/paymentdetails.model.js";
+const userModel = db.user;
+const paymentModel = db.payment;
 
 const _ = express.Router();
 
 _.route("/create-account").post((req, res) => {
   try {
     const body = req.body;
-    console.log(req.body);
     const result = userModel.findOne({
-      where: { email: body.email, delete: false },
+      where: { email: body.email },
     });
-
-    if (result) {
-      return res.send({
-        status: "failed",
-        message: `email address already exists`,
-      });
-    } else {
-      userModel.create(body);
-      return res.send({
-        status: "success",
-        message: "successfully create account",
-      });
-    }
+    result.then((data) => {
+      if (data) {
+        return res.send({
+          status: "failed",
+          message: `email address already exists`,
+        });
+      } else {
+        userModel.create(body);
+        return res.send({
+          status: "success",
+          message: "successfully create account",
+        });
+      }
+    });
   } catch (error) {
+    console.log(error.message);
     return res.status(501).send({ status: "failed", message: error.message });
   }
 });
