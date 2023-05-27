@@ -9,12 +9,14 @@ import {HttpClientModule} from '@angular/common/http'
 import { FormsModule } from '@angular/forms';
 import { ConnectService } from './connect.service';
 import { PaymentComponent } from './payment/payment.component';
+import { PayComponent } from './pay/pay.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    PaymentComponent
+    PaymentComponent,
+    PayComponent
   ],
   imports: [
     BrowserModule,

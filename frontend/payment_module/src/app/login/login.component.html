@@ -15,14 +15,14 @@
   <form
     #loginForm="ngForm"
     (ngSubmit)="setLoginData(loginForm.value)"
-    method="post"
-  >
+    method="post">
     <!-- Email input -->
-    <div class="inputbox mt-3 mr-2">
+    <div class="form-group inputbox mt-3 mr-2">
       <input
         type="email"
+        ngModel
         name="email"
-        ngmodel
+        
         class="form-control"
         required="required"
       />
@@ -30,11 +30,12 @@
     </div>
 
     <!-- FullName input -->
-    <div class="inputbox mt-3 mr-2">
+    <div class="form-group inputbox mt-3 mr-2">
       <input
         type="text"
+        ngModel
         name="fullName"
-        ngmodel
+        
         class="form-control"
         required="required"
       />
@@ -42,11 +43,12 @@
     </div>
 
     <!-- Password input -->
-    <div class="inputbox mt-3 mr-2">
+    <div class="form-group inputbox mt-3 mr-2">
       <input
         type="password"
+        ngModel
         name="password"
-        ngmodel
+        
         class="form-control"
         required="required"
       />

@@ -8,11 +8,12 @@ import { Observable } from 'rxjs';
 export class ConnectService {
 
   setUrl="http://localhost:3000/create-account"
-  
-  setUrlPayment=""
+
+  setUrlPayment="http://localhost:3000/make-payment"
   constructor(private http : HttpClient) { }
 
   setDataLog(data:any):Observable<any[]>{
+    console.warn(data)
     return this.http.post<any>(this.setUrl,data);
   }
   setPayment(data:any):Observable<any>{
