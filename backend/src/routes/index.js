@@ -41,6 +41,7 @@ _.route("/make-payment").post((req, res) => {
       message: "successfully paid amount",
     });
   } catch (error) {
+    console.log(error.message);
     return res.status(501).send({ status: "failed", message: error.message });
   }
 });
