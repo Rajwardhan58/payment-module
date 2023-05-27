@@ -3,14 +3,14 @@ import express from "express";
 
 // ------------ Express Application
 const app = express();
-
-// ------------ Database Connection
-import "./models/index.js";
+app.use(express.json());
 
 // ------------ Application Configuration
 import cors from "cors";
 app.use(cors());
-app.use(express.json());
+
+// ------------ Database Connection
+import "./models/index.js";
 
 // ------------ Application Routes
 import _ from "./routes/index.js";
